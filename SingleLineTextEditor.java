@@ -184,32 +184,4 @@ public class SingleLineTextEditor {
             }
         }
     }
-    int keyword(String s,String str){
-        int i=0;
-        int j=str.length()-1;
-        boolean found=true;
-        int cnt=0;
-        while(j<s.length()){
-            int a=i;
-            int b=0;
-            for(int p=0;p<str.length();p++){
-                if(s.charAt(a)!=str.charAt(b)){
-                    found=false;
-                    break;
-                }
-                a++;
-                b++;
-            }
-            if(found){
-                if((s.charAt(i-1)==' ' ||i == 0  )  && (s.charAt(j+1)==' ')){
-                    cnt++;
-                }
-                found=false;
-            }
-            i++;
-            j++;
-
-        }
-        return  cnt;
-    }
 }
